@@ -35,8 +35,8 @@ apt-get update
 apt-get install -y -q mssql-server
 export ACCEPT_EULA=y
 apt-get install -y -q mssql-tools unixodbc-dev
-MSSQL_SA_PASSWORD='Administrator01'
-MSSQL_PID='express'
+export MSSQL_SA_PASSWORD='Administrator01'
+export MSSQL_PID='express'
 /opt/mssql/bin/mssql-conf setup
 /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
 
