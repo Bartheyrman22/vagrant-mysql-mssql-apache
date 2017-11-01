@@ -23,6 +23,7 @@ sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysq
 mysql -u root -proot --execute "CREATE USER 'root'@'%' IDENTIFIED BY 'root';"
 mysql -u root -proot --execute "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' with GRANT OPTION; FLUSH PRIVILEGES;"
 mysql -u root -proot --execute "DROP USER 'root'@'localhost';"
+service mysql restart
 
 printf "\nInstalling MSSQL...\n\n"
 
